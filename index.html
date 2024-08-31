@@ -1,0 +1,998 @@
+<style>
+    .landing-page {
+      background-color: #06154d;
+      display: flex;
+      padding: 56px 0 0;
+      flex-direction: column;
+      overflow: hidden;
+      align-items: center;
+    }
+    
+    .navbar {
+      display: flex;
+      align-items: center;
+      gap: 40px 263px;
+      color: #fff;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      font: 400 20px/1 Outfit, sans-serif;
+    }
+    
+    .logo {
+      font-weight: 700;
+      text-transform: uppercase;
+      align-self: stretch;
+      margin: auto 0;
+      color:#fff;
+      text-decoration: none; 
+    }
+    
+    .nav-link {
+      text-align: center;
+      align-self: stretch;
+      margin: auto 0;
+      color: #ffff;  /* Sets the text color to white */
+      text-decoration: none;  /* Removes the underline from the links */
+    }
+    
+    .hero {
+      display: flex;
+      margin-top: 104px;
+      align-items: flex-end;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    
+    .hero-content {
+      display: flex;
+      min-width: 240px;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 515px;
+    }
+    
+    .hero-text {
+      border-radius: 0;
+      display: flex;
+      width: 395px;
+      max-width: 100%;
+      flex-direction: column;
+      color: #fff;
+      padding: 0 20px 12px 0;
+    }
+    
+    .hero-title {
+      text-transform: capitalize;
+      font: 700 70px/77px Outfit, sans-serif;
+    }
+    
+    .hero-description {
+      align-self: flex-start;
+      margin-top: 2px;
+      font: 400 18px/27px Roboto, sans-serif;
+    }
+    
+
+
+
+    .cta-buttons {
+      display: flex;
+      margin-top: 70px;
+      width: 100%;
+      align-items: center;
+      gap: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      font: 600 20px/1 Outfit, sans-serif;
+    }
+    
+    .cta-button {
+      transform: rotate(-0.214deg);
+      align-self: stretch;
+      border-radius: 83px;
+      background-color: #908fdb;
+      min-width: 240px;
+      min-height: 89px;
+      gap: 10px;
+      color: #fff;
+      flex-grow: 1;
+      width: 198px;
+      margin: auto 0;
+      padding: 31px 68px;
+    }
+    
+    .cta-button-secondary {
+      transform: rotate(-0.0036497260544936334rad);
+      align-self: stretch;
+      border-radius: 83px;
+      min-width: 240px;
+      min-height: 89px;
+      gap: 10px;
+      color: #fff;
+      flex-grow: 1;
+      width: 199px;
+      margin: auto 0;
+      padding: 31px 60px;
+      border: 2px solid #87cfd0;
+      background-color: None;
+    }
+   
+       
+    .cta-buttons {
+        align-self: stretch;
+        display: flex;
+        margin-top: 80px;
+        align-items: flex-start;
+        gap: 20px;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        line-height: 1;
+        flex-wrap: wrap;
+      }
+      
+      @media (max-width: 991px) {
+        .cta-buttons {
+          margin-top: 40px;
+        }
+      }
+      
+      .buy-button {
+        transform: rotate(-0.214deg);
+        border-radius: 83px;
+        background-color: #908fdb; /* Fill color */
+        color: #fff;
+        padding: 20px 40px; /* Reduced padding for a more standard button size */
+        font-size: 22px; /* Increased font size for better appearance */
+        font-weight: bold; /* Bold text for emphasis */
+      }
+      
+      @media (max-width: 991px) {
+        .buy-button {
+          padding: 10px 20px; /* Adjust padding for smaller screens */
+        }
+      }
+      
+      .sell-button {
+        transform: rotate(-0.0036497260544936334rad);
+        border-radius: 83px;
+        color: #87cfd0; /* Text color matching the border */
+        background-color: transparent; /* No fill color */
+        padding: 20px 40px; /* Reduced padding for consistency */
+        font-size: 22px; /* Increased font size for better appearance */
+        font-weight: bold; /* Bold text for emphasis */
+        border: 1px solid #87cfd0; /* 1px border */
+      }
+      /* Hover effect for Sell button */
+      .sell-button:hover {
+    background-color: #ff6f61; /* Fill color on hover */
+    color: #ffff; /* Text color on hover */
+     }
+      
+      @media (max-width: 991px) {
+        .sell-button {
+          padding: 10px 20px; /* Adjust padding for smaller screens */
+        }
+      }
+  
+
+    .hero-image {
+      display: flex;
+      min-width: 240px;
+      min-height: 504px;
+      flex-direction: column;
+      justify-content: center;
+      width: 552px;
+      padding: 12px 10px;
+    }
+    
+    .hero-img {
+      aspect-ratio: 1.11;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+    }
+    
+    .featured-section {
+      display: flex;
+      margin-top: 121px;
+      width: 100%;
+      max-width: 1200px;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    
+    .featured-title {
+      align-self: flex-start;
+      gap: 10px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 10px;
+      font: 600 20px/1 Outfit, sans-serif;
+    }
+    
+    .featured-logos {
+      border-radius: 10px;
+      background-color: rgba(48, 40, 99, 0.6);
+      display: flex;
+      margin-top: 12px;
+      min-height: 126px;
+      width: 100%;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 18px 7px 33px;
+    }
+    
+    .logo-container {
+      display: flex;
+      width: 1016px;
+      max-width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px;
+    }
+    
+    .logo-grid {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      gap: 40px 180px;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    
+    .logo-img {
+      aspect-ratio: 6;
+      object-fit: contain;
+      object-position: center;
+      align-self: stretch;
+      margin: auto 0;
+    }
+    
+    .analytics-section {
+      display: flex;
+      margin-top: 200px;
+      width: 980px;
+      max-width: 100%;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    
+    .analytics-content {
+      display: flex;
+      width: 100%;
+      align-items: flex-start;
+      gap: 17px;
+      justify-content: space-between;
+      
+    }
+    
+    .analytics-image {
+      display: flex;
+      min-width: 240px;
+      align-items: center;
+      gap: 10px;
+      justify-content: flex-start;
+      width: 500px;
+      padding: 10px;
+    }
+    
+    .analytics-img-wrapper {
+      align-self: stretch;
+      display: flex;
+      min-width: 240px;
+      width: 412px;
+      flex-direction: column;
+      margin: auto 0;
+    }
+    
+    .analytics-img {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+    }
+    
+    .analytics-text {
+      display: flex;
+      min-width: 240px;
+      flex-direction: column;
+      font-family: Roboto, sans-serif;
+      color: #fff;
+      font-weight: 400;
+      width: 531px;
+    }
+    
+    .analytics-title {
+      align-self: stretch;
+      gap: 10px;
+      font-size: 32px;
+      color: #fff;
+      white-space: nowrap;
+      line-height: 1;
+      padding: 10px;
+    }
+    
+    .analytics-subtitle {
+      align-self: stretch;
+      flex: 1;
+      margin-top: 17px;
+      width: 100%;
+      gap: 10px;
+      text-transform: capitalize;
+      padding: 10px;
+      font: 700 55px/61px Outfit, sans-serif;
+    }
+    
+    .analytics-description {
+      align-self: stretch;
+      width: 474px;
+      margin-top: 2px;
+      max-width: 100%;
+      gap: 10px;
+      font-size: 18px;
+      line-height: 27px;
+      padding: 10px;
+    }
+    
+    .analytics-cta {
+      display: flex;
+      margin-top: 17px;
+      width: 406px;
+      max-width: 100%;
+      flex-direction: column;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      justify-content: center;
+      padding: 10px;
+      font: 600 20px/1 Outfit, sans-serif;
+    }
+    
+    .analytics-cta-button {
+      align-self: stretch;
+      border-radius: 83px;
+      background-color: #908fdb;
+      min-height: 77px;
+      width: 100%;
+      gap: 10px;
+      padding: 25px 40px;
+    }
+    
+
+
+
+
+    .app-section {
+      display: flex;
+      margin-top: 93px;
+      width: 100%;
+      max-width: 1068px;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    
+    .app-content {
+      display: flex;
+      width: 100%;
+      align-items: flex-start;
+      gap: 28px;
+      justify-content: space-between;
+     
+    }
+    
+    .app-text {
+      display: flex;
+      min-width: 240px;
+      flex-direction: column;
+      font-family: Roboto, sans-serif;
+      color: #fff;
+      font-weight: 400;
+      width: 600px;
+    }
+    
+    .app-title {
+      align-self: stretch;
+      gap: 10px;
+      font-size: 32px;
+      color: #fff;
+      text-transform: uppercase;
+      line-height: 1;
+      padding: 10px;
+    }
+    
+    .app-subtitle {
+      align-self: stretch;
+      flex: 1;
+      margin-top: 24px;
+      width: 100%;
+      gap: 10px;
+      text-transform: capitalize;
+      padding: 10px;
+      font: 700 55px/61px Outfit, sans-serif;
+    }
+    
+    .app-description {
+      align-self: stretch;
+      width: 443px;
+      margin-top: 2px;
+      max-width: 100%;
+      gap: 10px;
+      font-size: 18px;
+      line-height: 27px;
+      padding: 10px;
+    }
+    
+    .app-cta {
+      display: flex;
+      margin-top: 24px;
+      width: 372px;
+      max-width: 100%;
+      flex-direction: column;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      justify-content: center;
+      padding: 10px;
+      font: 600 20px/1 Outfit, sans-serif;
+    }
+    
+    .app-cta-button {
+      align-self: stretch;
+      border-radius: 83px;
+      background-color: #908fdb;
+      min-height: 77px;
+      width: 100%;
+      gap: 10px;
+      padding: 25px 60px;
+    }
+    
+    .app-image {
+      display: flex;
+      min-width: 240px;
+      flex-direction: column;
+      justify-content: center;
+      width: 500px;
+      padding: 10px;
+    }
+    
+    .app-img-wrapper {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+    }
+    
+    .app-img {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+    }
+    
+    .testimonials-section {
+      display: flex;
+      width: 100%;
+      max-width: 1094px;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin: 74px 0 0 18px;
+    }
+    
+    .testimonials-header {
+      align-self: center;
+      display: flex;
+      width: 489px;
+      max-width: 100%;
+      flex-direction: column;
+      text-align: center;
+      justify-content: flex-start;
+    }
+    
+    .testimonials-title {
+      align-self: center;
+      gap: 10px;
+      color: #fff;
+      white-space: nowrap;
+      text-transform: uppercase;
+      padding: 10px;
+      font: 400 36px/1 Roboto, sans-serif;
+    }
+    
+    .testimonials-subtitle {
+      align-self: stretch;
+      margin-top: 14px;
+      width: 100%;
+      gap: 10px;
+      color: #fff;
+      text-transform: capitalize;
+      padding: 10px;
+      font: 700 55px/61px Outfit, sans-serif;
+    }
+    
+    .testimonials-grid {
+      display: flex;
+      margin-top: 24px;
+      width: 100%;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    
+    .testimonial-card {
+      border-radius: 0;
+      display: flex;
+      min-width: 240px;
+      flex-direction: column;
+      font-family: Roboto, sans-serif;
+      color: #fff;
+      font-weight: 400;
+      text-align: center;
+      flex-grow: 1;
+      width: 286px;
+      padding: 63px 8px 0;
+    }
+    
+    .testimonial-content {
+      border-radius: 10px;
+      background-color: #1f205a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 11px 45px;
+    }
+    
+    .testimonial-img {
+      aspect-ratio: 1.1;
+      object-fit: contain;
+      object-position: center;
+      width: 175px;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      z-index: 10;
+      margin-top: -63px;
+      max-width: 100%;
+    }
+    
+    .testimonial-name {
+      font-size: 32px;
+      line-height: 1;
+    }
+    
+    .testimonial-text {
+      font-size: 18px;
+      align-self: stretch;
+      margin-top: 35px;
+    }
+    
+    .cta-section {
+      background: linear-gradient (to right, #9c27b0, #8ecdff);
+      border-radius: 30px;
+      display: flex;
+      margin-top: 80px;
+      min-height: 322px;
+      width: 100%;
+      max-width: 1065px;
+      flex-direction: column;
+      align-items: center;
+      font-family: Outfit, sans-serif;
+      color: rgb(240, 232, 240);
+      font-weight: 600;
+      justify-content: center;
+      padding: 24px 243px 24px 244px;
+      
+      
+    }
+    
+    .cta-title {
+      text-align: center;
+      font: 400 32px Roboto, sans-serif;
+    }
+    
+    .cta-subtitle {
+      font-size: 48px;
+      line-height: 50px;
+      letter-spacing: 4.8px;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 30px;
+    }
+    
+    .cta-button {
+
+      align-self: center;
+      background-color: #000;
+      margin-top: 30px;
+      min-height: 76px;
+      width: 345px;
+      max-width: 100%;
+      gap: 10px;
+      font-size: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 1;
+      padding: 24px 60px;
+    }
+    
+    .footer {
+      align-self: flex-start;
+      display: flex;
+      width: 807px;
+      max-width: 100%;
+      flex-direction: column;
+      color: #fff;
+      white-space: nowrap;
+      justify-content: flex-start;
+      margin: 135px 0 0 29px;
+      font: 400 32px Roboto, sans-serif;
+    }
+    
+    .footer-links {
+      display: flex;
+      margin-top: 45px;
+      width: 100%;
+      align-items: center;
+      gap: 29px;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    
+    .footer-link {
+      align-self: stretch;
+      flex-grow: 1;
+      margin: auto 0;
+      color: #ffff;  /* Sets the text color to white */
+      text-decoration: none; 
+    }
+    
+    .footer-divider {
+      align-self: stretch;
+      display: flex;
+      margin-top: 102px;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    
+    .divider {
+      border-radius: 30px;
+      display: flex;
+      min-height: 17px;
+      width: 100%;
+    }
+    
+    @media (max-width: 991px) {
+      .navbar {
+        max-width: 100%;
+      }
+    
+      .hero {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    
+      .hero-content {
+        max-width: 100%;
+      }
+    
+      .hero-title {
+        font-size: 40px;
+        line-height: 49px;
+      }
+    
+      .hero-description {
+        margin-top: 40px;
+      }
+    
+      .cta-buttons {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    
+      .cta-button,
+      .cta-button-secondary {
+        padding: 0 20px;
+      }
+    
+      .hero-image {
+        max-width: 100%;
+      }
+    
+      .hero-img {
+        max-width: 100%;
+      }
+    
+      .featured-section {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    
+      .featured-logos {
+        max-width: 100%;
+      }
+    
+      .logo-grid {
+        max-width: 100%;
+      }
+    
+      .analytics-section {
+        margin-top: 40px;
+      }
+    
+      .analytics-content {
+        max-width: 100%;
+      }
+    
+      .analytics-image {
+        max-width: 100%;
+      }
+    
+      .analytics-text {
+        max-width: 100%;
+      }
+    
+      .analytics-title {
+        white-space: initial;
+      }
+    
+      .analytics-subtitle {
+        max-width: 100%;
+        font-size: 40px;
+        line-height: 49px;
+      }
+    
+      .analytics-description {
+        max-width: 100%;
+      }
+    
+      .analytics-cta-button {
+        padding: 0 20px;
+      }
+    
+      .app-section {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    
+      .app-content {
+        max-width: 100%;
+      }
+    
+      .app-text {
+        max-width: 100%;
+      }
+    
+      .app-title {
+        white-space: initial;
+      }
+    
+      .app-subtitle {
+        max-width: 100%;
+        font-size: 40px;
+        line-height: 49px;
+      }
+    
+      .app-description {
+        max-width: 100%;
+      }
+    
+      .app-cta-button {
+        padding: 0 20px;
+      }
+    
+      .app-image {
+        max-width: 100%;
+      }
+    
+      .testimonials-section {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    
+      .testimonials-title {
+        white-space: initial;
+      }
+    
+      .testimonials-subtitle {
+        max-width: 100%;
+        font-size: 40px;
+        line-height: 49px;
+      }
+    
+      .cta-section {
+        max-width: 100%;
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+    
+      .cta-title {
+        max-width: 100%;
+      }
+    
+      .cta-subtitle {
+        max-width: 100%;
+        font-size: 40px;
+        line-height: 47px;
+      }
+    
+      .cta-button {
+        padding: 0 20px;
+      }
+    
+
+
+      .footer {
+        margin-top: 40px;
+        white-space: initial;
+      }
+    
+      .footer-links {
+        max-width: 100%;
+        margin-top: 40px;
+        white-space: initial;
+          
+      }
+     
+      .footer-link{
+        text-align: center;
+        align-self: stretch;
+        margin: auto 0;
+        color: #ffff;  /* Sets the text color to white */
+        text-decoration: none;  /* Removes the underline from the links */
+      }
+    
+      .footer-divider {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    
+      .divider {
+        max-width: 100%;
+      }
+    }
+
+
+
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    </style>
+    
+    <header class="landing-page">
+      <nav class="navbar">
+        <a href="#" class="logo">krypto</a>
+        <a href="#about" class="nav-link">about</a>
+        <a href="#contact" class="nav-link">contact</a>
+        <a href="#buy-nfts" class="nav-link">buy nfts</a>
+      </nav>
+    
+
+
+      <section class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title">discover and collect rare NFTs</h1>
+            <p class="hero-description">The most secure marketplace for buying and selling unique crypto assets.</p>
+          </div>
+          <div class="cta-buttons">
+            <button class="buy-button">BUY NFTS</button>
+            <button class="sell-button">SELL NFTS</button>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f635c9a01fb061e1becb066e0134b001dd3f3d255363277a7a1706b73a830ffc?placeholderIfAbsent=true&apiKey=4a867dcbc44b46bdb905c0d5526e5597" alt="NFT showcase" class="hero-img" loading="lazy">
+        </div>
+      </section>
+
+
+    
+      <section class="featured-section">
+        <h2 class="featured-title">Featured on</h2>
+        <div class="featured-logos">
+          <div class="logo-container">
+            <div class="logo-grid">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/eb16cf14d2db7a867fa741cc57adb90e7b60a2935664337f5475e72fdc34e3c1?placeholderIfAbsent=true&apiKey=4a867dcbc44b46bdb905c0d5526e5597" alt="Featured logo 1" class="logo-img" loading="lazy">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d0a4c495afb12109a0277a9d6efaf33b2ebfe672a05e295c1fef75adc1d0e38c?placeholderIfAbsent=true&apiKey=4a867dcbc44b46bdb905c0d5526e5597" alt="Featured logo 2" class="logo-img" loading="lazy">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/185dc9a724a46c4f75e5a773f7deac6b229c56eb96446fae396737f93f94a43b?placeholderIfAbsent=true&apiKey=4a867dcbc44b46bdb905c0d5526e5597" alt="Featured logo 3" class="logo-img" loading="lazy">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fab7b6dcace5cf16e818c8b373013630fa5de1ca6c54d99a93f9f055f8e4d835?placeholderIfAbsent=true&apiKey=4a867dcbc44b46bdb905c0d5526e5597" alt="Featured logo 4" class="logo-img" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="analytics-section">
+        <div class="analytics-content">
+          <div class="analytics-image">
+            <div class="analytics-img-wrapper">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5082b7afefbfc734845f911c51d586494e6dff5b9daa466d65e2b5106280aef6?placeholderIfAbsent=true&apiKey=4a867dcbc44b46bdb905c0d5526e5597" alt="Analytics dashboard" class="analytics-img" loading="lazy">
+            </div>
+          </div>
+          <div class="analytics-text">
+            <h2 class="analytics-title">ANALYTICS</h2>
+            <h3 class="analytics-subtitle">built-in analytics to track your nfts</h3>
+            <p class="analytics-description">Use our built-in analytics dashboard to pull valuable insights and monitor the value of your Krypto portfolio over time.</p>
+            <div class="analytics-cta">
+              <button class="buy-button">view our pricing</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="app-section" id="buy-nfts">
+        <div class="app-content">
+          <div class="app-text">
+            <h2 class="app-title">Get our app</h2>
+            <h3 class="app-subtitle">browse nfts from your smartphone</h3>
+            <p class="app-description">Our Krypto app is the easiest way to keep track of your assets when you're on the go.</p>
+            <div class="app-cta">
+              <button class="buy-button">Download on ios</button>
+            </div>
+          </div>
+          <div class="app-image">
+            <div class="app-img-wrapper">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/48fa94abc7c964e42c459840a60e65967b8d51663b30a8eb00a7c299c83f2d40?placeholderIfAbsent=true&apiKey=4a867dcbc44b46bdb905c0d5526e5597" alt="Krypto mobile app" class="app-img" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="testimonials-section" id="about">
+        <div class="testimonials-header">
+          <h2 class="testimonials-title">testimonials</h2>
+          <h3 class="testimonials-subtitle">read what others have to say</h3>
+        </div>
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <div class="testimonial-content">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/52d19afaf251157eb1dd6e5f129a72850d70e92df87475863b46c9de9000c6af?placeholderIfAbsent=true&apiKey=4a867dcbc44b46bdb905c0d5526e5597" alt="Olivia Cole" class="testimonial-img" loading="lazy">
+              <h4 class="testimonial-name">olivia cole</h4>
+              <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel.</p>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <div class="testimonial-content">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/26fd95e10846e8224f5bff01bd2ca333726fb3e97bd07bc24b291a81586153c3?placeholderIfAbsent=true&apiKey=4a867dcbc44b46bdb905c0d5526e5597" alt="Evan White" class="testimonial-img" loading="lazy">
+              <h4 class="testimonial-name">evan White</h4>
+              <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel.</p>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <div class="testimonial-content">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/414315249c01b7edb8446e5779b1679bdd96df3d9a858772faaf5ce62b02b5ae?placeholderIfAbsent=true&apiKey=4a867dcbc44b46bdb905c0d5526e5597" alt="Jessica Page" class="testimonial-img" loading="lazy">
+              <h4 class="testimonial-name">Jessica Page</h4>
+              <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    
+      <section class="cta-section">
+        <h2 class="cta-title">Are you ready?</h2>
+        <h3 class="cta-subtitle">Be a part of the next big thing</h3>
+        <button class="cta-button">Get started</button>
+      </section>
+    
+      <footer class="footer" id="contact">
+        <h2>Contact</h2>
+        <nav class="footer-links">
+          <a href="#" class="footer-link">Email</a>
+          <a href="#" class="footer-link">Linkedin</a>
+          <a href="#" class="footer-link">Twitter</a>
+          <a href="#" class="footer-link">Instagram</a>
+        </nav>
+        <div class="footer-divider">
+          <div class="divider"></div>
+        </div>
+      </footer>
+    </header>
